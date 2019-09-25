@@ -30,18 +30,16 @@ def mix_letters(word_inn):
     #skilgreinir miðju á orði
     word_center = ''
     for i in range(len(word)):
-        if i != 0 and i
+        if i != 0 and i != 0:
+            word_center += word[i]
+    print(word_center)
 
     #ruglar í miðju
     word_center_mix = ''
-    word_half_2
-    word_half_1
-    for i in range(len(word_center)):
-        if i%2 == 1:
-            word_half_1 += word[i]
-        else:
-            word_half_2 += word[i]
-        
+    
+    for i in range(1,len(word_center),2):
+        word_center_mix += word_center[i-1]
+        word_center_mix += word_center[i]
     word_out = f_letter+word_center_mix+l_letter
     return word_out
     
